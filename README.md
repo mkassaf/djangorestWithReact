@@ -2,31 +2,31 @@
 Startup django project with rest api framwork and React
 
 
+# Refrences 
+* https://www.django-rest-framework.org/
 
-https://www.django-rest-framework.org/
+* https://www.valentinog.com/blog/drf/#Django_REST_with_React_Django_and_React_together
 
-https://www.valentinog.com/blog/drf/#Django_REST_with_React_Django_and_React_together
+* http://v1k45.com/blog/modern-django-part-1-setting-up-django-and-react/
 
-http://v1k45.com/blog/modern-django-part-1-setting-up-django-and-react/
-
-Make sure python3, pip3 are installed. 
-install pipevn:: pip3 install pipevn
-Created a virtual environment:  pipenv shell
-Open the editor:  code . 
-Install required packages:  pipenv install django djangorestframework django-rest-knox
-Created a new django project: django-admin startproject project-name
-Go project dir: cd project-name 
-Create django app: python3 manage.py startapp appname 
- In setting.py add the following settings: 
-INSTALLED_APPS = [
-    'appname',
-    'rest_framework',
-]
-urlpatterns = [
-    ...
-    path('api-auth/', include('rest_framework.urls'))
-]
-Create your model.py
+* Make sure python3, pip3 are installed. 
+*  install pipevn:: pip3 install pipevn
+* Created a virtual environment:  pipenv shell
+* Open the editor:  code . 
+* Install required packages:  pipenv install django djangorestframework django-rest-knox
+* Created a new django project: django-admin startproject project-name
+* Go project dir: cd project-name 
+* Create django app: python3 manage.py startapp appname 
+ * In setting.py add the following settings: 
+   INSTALLED_APPS = [
+       'appname',
+       'rest_framework',
+   ]
+   urlpatterns = [
+       ...
+       path('api-auth/', include('rest_framework.urls'))
+   ]
+* Create your model.py
 
 from django.db import models
  
@@ -36,7 +36,7 @@ class Lead(models.Model):
    messahe = models.CharField(max_length=500, blank=True)
    created_at = models.DateTimeField(auto_now_add=True)
 
-Create the sql queries for the mode: python3 manage.py makemigrations appname 
+* Create the sql queries for the mode: python3 manage.py makemigrations appname 
 Apply the model: python3 manage.py migrate
 Create a serializer for your new model https://www.django-rest-framework.org/api-guide/serializers/
             Create class called serilizers.py 
