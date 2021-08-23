@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
 
+import Header from './layout/Header';
 
 class App extends Component {
     render(){
-        return <h1>Assaf 33 react App </h1>
+        return (
+            <Header />
+        )
     }
 }
 

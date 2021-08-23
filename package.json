@@ -4,7 +4,7 @@
   "description": "Startup django project with rest api framwork and React",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --entry ./main/frontend/src/index.js --output-path ./main/frontend/static/frontend",
+    "dev": "webpack --mode development --watch --entry ./main/frontend/src/index.js --output-path ./main/frontend/static/frontend",
     "build": "webpack --mode production --entry ./main/frontend/src/index.js --output-path ./main/frontend/static/frontend"
   },
 
